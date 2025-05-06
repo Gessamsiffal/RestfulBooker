@@ -1,0 +1,46 @@
+from selenium.webdriver.common.by import By
+
+#Локаторы логина, пароля, кнопки входа
+FIELD_LOGIN_LOC = ()
+FIELD_PASSWORD_LOC = ()
+BTN_LOGIN_LOC = ()
+BTN_LOGOUT_LOC = ()
+
+
+#Локаторы формы контактов
+CONTACT_FORM_NAME_LOC = ()
+CONTACT_FORM_EMAIL_LOC = ()
+CONTACT_FORM_PHONE_LOC = ()
+CONTACT_FORM_SUBJECT_LOC = ()
+CONTACT_FORM_MSG_LOC = ()
+CONTACT_FORM_BTN_SUBMIT_LOC = ()
+
+#HEADER локаторы
+HEAD_FIELD_ROOMS_LOC = ()
+HEAD_FIELD_BOOKING_LOC = ()
+HEAD_FIELD_AMENITIES_LOC = ()
+HEAD_FIELD_LOCATION_LOC = ()
+HEAD_FIELD_CONTACT_LOC = ()
+HEAD_FIELD_ADMIN_LOC = ()
+
+
+#Локаторы формы выбора комнаты
+BTN_BOOKNOW_LOC = ()
+FIELD_CHEKIN_LOC = ()
+FIELD_CHECKOUT_LOC = ()
+BTN_CHECK_AVAILABLE_LOC = ()
+
+#Локаторы панели администрации
+ADMIN_FORM_ROOMS_LOC = ()
+ADMIN_FORM_REPORT_LOC = ()
+ADMIN_FORM_BRANDING_LOC = ()
+ADMIN_FORM_MESSAGES_LOC = ()
+
+INP_ROOM_LOC = ()
+INP_TYPE_LOC = ()
+INP_ACCESSIBLE_LOC = ()
+INP_PRICE_LOC = ()
+INP_CHECKBOX_LOC = ()
+BTN_CREATE_LOC = ()
+
+
