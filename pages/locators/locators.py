@@ -1,12 +1,5 @@
 from selenium.webdriver.common.by import By
 
-#Локаторы логина, пароля, кнопки входа
-FIELD_LOGIN_LOC = ()
-FIELD_PASSWORD_LOC = ()
-BTN_LOGIN_LOC = ()
-BTN_LOGOUT_LOC = ()
-
-
 #Локаторы формы контактов
 CONTACT_FORM_NAME_LOC = ()
 CONTACT_FORM_EMAIL_LOC = ()
@@ -35,7 +28,6 @@ ADMIN_FORM_ROOMS_LOC = ()
 ADMIN_FORM_REPORT_LOC = ()
 ADMIN_FORM_BRANDING_LOC = ()
 ADMIN_FORM_MESSAGES_LOC = ()
-
 INP_ROOM_LOC = ()
 INP_TYPE_LOC = ()
 INP_ACCESSIBLE_LOC = ()

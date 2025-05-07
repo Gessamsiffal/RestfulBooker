@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from dotenv import load_dotenv
 import pytest
 
 
@@ -15,3 +16,12 @@ def driver():
     yield chrome_driver
 
     chrome_driver.quit()
+
+
+@pytest.fixture()
+def login_page(driver):
+    return
+
+@pytest.fixture(scope="session", autouse=True)
+def load_env():
+    load_dotenv()
