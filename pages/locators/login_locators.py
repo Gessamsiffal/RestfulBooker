@@ -7,3 +7,6 @@ BTN_LOGIN_LOC = (By.ID, 'doLogin')
 BTN_LOGOUT_LOC = (By.XPATH, "//button[text()='Logout']")
 PAGE_URL = '/admin'
 
+#Локаторы сценариев
+TEXT_TRUE_LOGIN = (By.XPATH, '//div[contains(@class, "rowHeader")]//p[text()="Room #"]')
+TEXT_FALSE_LOGIN = (By.CSS_SELECTOR, 'div.alert.alert-danger')
