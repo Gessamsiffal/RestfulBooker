@@ -1,1 +1,0 @@
-[35mDEBUG   [0m LOGIN:login_page.py:16 Вводим логин: admin и пароль: password
