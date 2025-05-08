@@ -1,7 +1,6 @@
 import pytest
 import os
 import allure
-from pages.login_page import CustomerLogin
 from dotenv import load_dotenv
 
 
