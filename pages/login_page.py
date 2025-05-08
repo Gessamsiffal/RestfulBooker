@@ -13,6 +13,6 @@ class CustomerLogin(BasePage):
 
     def fill_form(self, login, password):
         logger.debug(f'Вводим логин: {login} и пароль: {password}')
-        email_field = self.find(loc.FIELD_LOGIN_LOC).send_keys(login)
-        password_field = self.find(loc.FIELD_PASSWORD_LOC).send_keys(password)
-        btn_sign = self.find(loc.BTN_LOGIN_LOC).click()
+        email_field = self.find_elem(loc.FIELD_LOGIN_LOC).send_keys(login)
+        password_field = self.find_elem(loc.FIELD_PASSWORD_LOC).send_keys(password)
+        btn_sign = self.find_elem(loc.BTN_LOGIN_LOC).click()

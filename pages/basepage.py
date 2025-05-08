@@ -2,15 +2,15 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 
 class BasePage:
-    base_url = 'https://automationintesting.online'
-    page_url = None
+    BASE_URL = 'https://automationintesting.online'
+    PAGE_URL = None
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
 
     def open_page(self):
-        if self.page_url:
-            self.driver.get(f'{self.base_url}{self.page_url}')
+        if self.PAGE_URL:
+            self.driver.get(f'{self.BASE_URL}{self.PAGE_URL}')
         else:
             raise NotImplementedError('Page can not be opened for this page class')
 
