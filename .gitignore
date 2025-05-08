@@ -1,6 +1,14 @@
-# created by virtualenv automatically
-.venv
-.idea
+.venv/
+venv/
+env/
+.idea/
 .env
+.env.*
 __pycache__/
 *.py[cod]
+*.pyo
+# Allure отчеты
+allure-results/
+allure-report/
+# Pytest кэш
+.pytest_cache/
