@@ -6,6 +6,7 @@ from time import sleep
 
 from API.booking_api import BookingAPI
 from pages.login_page import CustomerLogin
+from API.auth_api import AuthApi
 
 
 @pytest.fixture()
@@ -33,3 +34,10 @@ def load_env():
 @pytest.fixture()
 def booking_api():
     return BookingAPI()
+
+@pytest.fixture(scope="module")
+def auth_token():
+    auth_api = AuthApi()
+    response = auth_api.create_token()
+    assert response.status_code == 200
+    return response.json()["token"]
