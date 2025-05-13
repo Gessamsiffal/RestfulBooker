@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import pytest
 from time import sleep
 
+from API.booking_api import BookingAPI
 from pages.login_page import CustomerLogin
 
 
@@ -28,3 +29,7 @@ def login_page(driver):
 @pytest.fixture(scope="session", autouse=True)
 def load_env():
     load_dotenv()
+
+@pytest.fixture()
+def booking_api():
+    return BookingAPI()
