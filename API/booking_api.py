@@ -1,5 +1,3 @@
-from wsgiref import headers
-
 import requests
 
 from config.config import BASE_URL, BOOKING_ENDPOINT
@@ -21,8 +19,17 @@ class BookingAPI:
 
     def delete_booking(self, booking_id, token ):
         url = f"{BASE_URL}{BOOKING_ENDPOINT}/{booking_id}"
-        headers = {'Content-Type': 'application/json',
-                   'Cookie': f"token={token}"}
+        headers = {
+            'Content-Type': 'application/json',
+                   'Cookie': f"token={token}"
+        }
 
-        return requests.delete(url, json=payload, headers=headers)
+        return requests.delete(url, headers=headers)
 
+    def update_booking(self, booking_id, payload, token):
+        url = f"{BASE_URL}{BOOKING_ENDPOINT}/{booking_id}"
+        headers = {
+            'Content-Type': 'application/json',
+                   'Cookie': f"token={token}"
+        }
+        return requests.patch(url, json=payload, headers=headers)
