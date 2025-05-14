@@ -95,6 +95,10 @@ class TestBookingPositive(BaseBookingTest):
         resp_json = response.json()
         assert resp_json['firstname'] == 'Roor'
         assert resp_json['lastname'] == 'Saaas'
+        print(f"Token used: {self.token}")
+        print(f"Booking ID: {booking_id}")
+        print(f"Response status: {response.status_code}")
+        print(f"Response body: {response.text}")
 
 
 @pytest.mark.api

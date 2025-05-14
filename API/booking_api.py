@@ -30,6 +30,15 @@ class BookingAPI:
         url = f"{BASE_URL}{BOOKING_ENDPOINT}/{booking_id}"
         headers = {
             'Content-Type': 'application/json',
-                   'Cookie': f"token={token}"
+            'Accept': 'application/json',
+            'Cookie': f"token={token}"
         }
-        return requests.patch(url, json=payload, headers=headers)
+        print("\n=== PATCH ===")
+        print("URL:", url)
+        print("TOKEN:", token)
+        print("HEADERS:", headers)
+        print("PAYLOAD:", payload)
+        response = requests.patch(url, json=payload, headers=headers)
+        print("STATUS CODE:", response.status_code)
+        print("RESPONSE BODY:", response.text)
+        return response

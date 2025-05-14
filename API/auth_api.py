@@ -10,4 +10,5 @@ class AuthApi:
             "password": "password123"
         }
         response = requests.post(url, json=payload)
+
         return response
