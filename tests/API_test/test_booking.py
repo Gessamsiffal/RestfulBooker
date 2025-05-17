@@ -40,7 +40,7 @@ class BaseBookingTest:
                 assert response.status_code in [201, 204], f"Не удалось удалить бронирование {booking_id}"
 
 
-
+@pytest.mark.smoke
 @pytest.mark.api
 @pytest.mark.positive
 @allure.feature('Booking API')
@@ -82,6 +82,7 @@ class TestBookingPositive(BaseBookingTest):
 
         response = self.booking_api.create_booking(payload)
         assert response.status_code == 200
+
         booking_id = response.json()['bookingid']
         self.create_booking.append(booking_id)
 
@@ -92,15 +93,14 @@ class TestBookingPositive(BaseBookingTest):
 
         response = self.booking_api.update_booking(booking_id, update_data, self.token)
         assert response.status_code == 200
+
         resp_json = response.json()
+
         assert resp_json['firstname'] == 'Roor'
         assert resp_json['lastname'] == 'Saaas'
-        print(f"Token used: {self.token}")
-        print(f"Booking ID: {booking_id}")
-        print(f"Response status: {response.status_code}")
-        print(f"Response body: {response.text}")
 
 
+@pytest.mark.smoke
 @pytest.mark.api
 @pytest.mark.negative
 @allure.feature('Booking API')
@@ -111,9 +111,8 @@ class TestBookingNegative(BaseBookingTest):
     @allure.severity(allure.severity_level.NORMAL)
     def test_create_booking_with_empty_payload(self):
         response = self.booking_api.create_booking({})
+
         assert response.status_code in [400, 500], f"Ожидался статус кода: {response.status_code}"
-
-
 
     @allure.title('Частичное обновление несуществующего бронирования')
     @allure.severity(allure.severity_level.CRITICAL)
